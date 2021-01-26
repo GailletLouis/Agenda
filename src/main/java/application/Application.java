@@ -23,9 +23,9 @@ public class Application {
 		customRandom.setSeed(seed);
 		
 		Agenda agendaTheo = new Agenda();
-		agendaTheo.setAgenda(new ArrayList<Days>(Arrays.asList(Days.Wednesday, Days.Thursday, Days.Friday)));
+		agendaTheo.week = new ArrayList<Days>(Arrays.asList(Days.Wednesday, Days.Thursday, Days.Friday));
 		Agenda agendaCarole = new Agenda();
-		agendaCarole.setAgenda(new ArrayList<Days>(Arrays.asList(Days.Monday, Days.Tuesday, Days.Wednesday)));
+		agendaCarole.week = new ArrayList<Days>(Arrays.asList(Days.Monday, Days.Tuesday, Days.Wednesday));
 		Person louis = new Person("Louis");
 		Group laReleve = new Group("La relève", louis);
 		
