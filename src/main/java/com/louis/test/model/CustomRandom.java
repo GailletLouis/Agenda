@@ -1,4 +1,4 @@
-package model;
+package com.louis.test.model;
 
 import java.util.Random;
 

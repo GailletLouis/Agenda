@@ -1,4 +1,4 @@
-package model;
+package com.louis.test.model;
 
 public class Person {
 
@@ -11,7 +11,7 @@ public class Person {
 	public Person(String name) {
 		this.name = name;
 		this.agenda = new Agenda();
-		this.agenda.week = Agenda.generateRandomWeek(5); // Will fill agenda with random days
+		this.agenda.setWeek(Agenda.generateRandomWeek(5)); // Will fill agenda with random days
 	}
 	
 	public Person(String name, Agenda agenda) {
@@ -24,7 +24,7 @@ public class Person {
 		printName();
 		System.out.print(" : ");
 		agenda.print(separator);
-		if(agenda.isEmpty()) System.out.print("En télétravail toute la semaine");
+		if(agenda.isEmpty()) System.out.print("En tï¿½lï¿½travail toute la semaine");
 		System.out.println();
 	}
 	

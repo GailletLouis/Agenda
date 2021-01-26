@@ -1,4 +1,4 @@
-package model;
+package com.louis.test.model;
 
 import java.util.ArrayList;
 import java.io.*;
@@ -8,13 +8,18 @@ import java.io.*;
 public class Agenda implements java.io.Serializable {
 	
 	// Attributes
-	public ArrayList<Days> week;
+	private ArrayList<Days> week; // mettre days pour respecter les conventions de listes
+	// lombok peut cr�er les getters et setters automatiquement lors de la compilation
 
-	
+
+
 	// Constructors	
 	public Agenda() {
 		this.week = new ArrayList<Days>();
 	}
+	
+	// Je peux mettre des constructeurs avec des param�tres, mais il faut a minima un constructeur vide.
+	// (si c'est un bean qui sera utilis� par des framework)
 
 
 	// Methods 
@@ -50,5 +55,16 @@ public class Agenda implements java.io.Serializable {
 	public boolean isEmpty() {
 		if(week.isEmpty()) return true;
 		else return false;
+	}
+	
+	// Getters & Setters
+	
+	public ArrayList<Days> getWeek() {
+		return week;
+	}
+
+
+	public void setWeek(ArrayList<Days> week) {
+		this.week = week;
 	}
 }
